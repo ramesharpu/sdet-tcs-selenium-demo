@@ -148,10 +148,107 @@ public class LocatorStrategy extends BaseTest{
 		$x("//button[contains(text(),'g i')]")
 		$x("//button[contains(text(),'og ')]")
 		
+		//index
+		$x("//select[3]")
 		
+		//chained
+		$x("//div[@class='_5k_5']/span/span")
+
 		//css
 //		driver.findElement(By.cssSelector("#email")).sendKeys("from css");
 		
+		//css -  id attribute
+		$$("#email")
+		
+		//css - class attribute
+		$$(".inputtext")
+		$$("._55r1")
+		$$("._6luy")
+		$$(".inputtext._55r1")
+		$$("._55r1._6luy")
+		$$(".inputtext._6luy")
+		
+		//css ==> id and class attribute
+		$$("#email.inputtext")
+		$$("#email._55r1")
+		$$("#email._6luy")
+		$$("#email.inputtext._55r1")
+		$$("#email.inputtext._6luy")
+		$$("#email._55r1._6luy")
+		$$(".inputtext#email._55r1._6luy")
+		$$(".inputtext._55r1#email._6luy")
+		$$(".inputtext._55r1._6luy#email")
+		$$("._55r1#email")
+		$$("._6luy#email")
+		$$(".inputtext._55r1#email")
+		$$(".inputtext._6luy#email")
+		$$("._55r1._6luy#email")
+		$$(".inputtext#email._55r1")
+		$$(".inputtext#email._6luy")
+		$$("._55r1#email._6luy")		
+		$$("#email._55r1.inputtext._6luy")
+		$$("#email._55r1._6luy.inputtext")
+		$$("._55r1#email.inputtext._6luy")
+		
+		//css => html tagname
+		$$("button")
+		
+		//css ==> html attribute ==> not recommended
+		$$("[id='email']")
+		$$("[data-testid='royal-email']")
+		
+		//css (id and class) + html (tagname + attributes)
+		$$("input#email")
+		$$("input.inputtext")
+		$$("input.inputtext._55r1._6luy")
+		$$("input[id='email']#email")
+		$$("input[id='email']#email.inputtext")
+		$$("input[id='email']#email.inputtext._55r1")
+		$$("input[id='email']#email.inputtext._6luy")
+		$$("input[id='email']#email._55r1._6luy")
+		$$("input[id='email'].inputtext")
+		$$("input[id='email']._55r1")
+		$$("input[id='email']._6luy")
+		$$("input[id='email'].inputtext._55r1")
+		$$("input[id='email']._55r1._6luy")
+		$$("input[id='email'].inputtext._6luy")
+		$$("input[id='email']#email.inputtext._55r1._6luy")
+		$$("input[id='email'].inputtext#email._55r1._6luy")
+		$$("input[id='email'].inputtext._55r1#email._6luy")
+		$$("input[id='email'].inputtext._55r1._6luy#email")
+		
+		//substring
+		//starts-with ==> ^
+		$$("input[id^=email]")
+		$$("input[id^=emai]")
+		$$("input[id^=ema]")
+		$$("input[id^=em]")
+		$$("input[id^=e]")
+		
+		//end-with ==> $
+		$$("input[id$=email]")
+		$$("input[id$=mail]")
+		$$("input[id$=ail]")
+		$$("input[id$=il]")
+		$$("input[id$=l]")
+		
+		//contains ==> *
+		$$("input[id*=email]")
+		$$("input[id*=emai]")
+		$$("input[id*=ema]")
+		$$("input[id*=em]")
+		$$("input[id*=e]")
+		
+		$$("input[id*=mail]")
+		$$("input[id*=ail]")
+		$$("input[id*=il]")
+		$$("input[id*=l]")
+		
+		$$("input[id*=mai]")
+		$$("input[id*=ai]")
+		$$("input[id*=ma]")
+		$$("input[id*=i]")
+		$$("input[id*=m]")	
 		
 	}
 	
