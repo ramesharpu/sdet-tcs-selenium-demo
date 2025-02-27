@@ -1,5 +1,7 @@
 package basic;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -21,6 +23,15 @@ public class BaseTest {
 			System.out.println("valid browser was not provided, hence quitting the automation run");
 			System.exit(0);
 		}
+		
+		//implicit wait
+//		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		
+		//page load timeout ==> pom
+//		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+		
+		//script load timeout
+//		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(10));
 		
 		//url ==> start with http:// or https:// , ip:port or fqdn:port or www.<name>.com
 		if(url!="")
